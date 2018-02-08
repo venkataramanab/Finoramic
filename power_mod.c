@@ -18,6 +18,8 @@ In other words, make sure the answer you return is non negative.
  * */
 #include <printf.h>
 
+int powMod(int x, int n, int d) ;
+
 void main() {
     int x, n, d;
     scanf("%d%d%d", &x, &n, &d);
