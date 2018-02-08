@@ -13,6 +13,8 @@ find (xn % d)
 
 Note that remainders on division cannot be negative.
 In other words, make sure the answer you return is non negative.
+
+ Constraint: Expecting x,n,d are positive integers.
  * */
 #include <printf.h>
 
