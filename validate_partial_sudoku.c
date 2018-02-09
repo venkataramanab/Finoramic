@@ -44,10 +44,9 @@ int checkRows(const char *sudoku) {
         int hash[10] = {0};
         for (int j = 0; j < 9; ++j) {
             printf("%d,%d\n", j, *sudoku - '0');
-            if (*sudoku == '.') {
-                sudoku++;
+            if (*sudoku == '.' && sudoku++)
                 continue;
-            } else if (hash[*sudoku - '0'] > 1)
+            else if (hash[*sudoku - '0'] > 0)
                 return 0;
             else hash[*sudoku - '0']++;
             sudoku++;
@@ -65,7 +64,7 @@ int checkCols(char *sudoku) {
             if (*cur == '.') {
                 cur += 9;
                 continue;
-            } else if (hash[*cur - '0'] > 1)
+            } else if (hash[*cur - '0'] > 0)
                 return 0;
             else hash[*cur - '0']++;
             cur += 9;
@@ -83,10 +82,9 @@ int checkBox(char *sudoku) {
         for (int j = 0; j < 9; ++j) {
             if (j != 0 && j % 3 == 0) cur += 6;
             printf("%d,%d,%d\n", i, j, *cur - '0');
-            if (*cur == '.') {
-                cur++;
+            if (*cur == '.' && cur++)
                 continue;
-            } else if (hash[*cur - '0'] > 1)
+            else if (hash[*cur - '0'] > 0)
                 return 0;
             else hash[*cur - '0']++;
             cur++;
