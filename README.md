@@ -1,4 +1,4 @@
-# Finoramic
+# Interviewbit problem set 1
 <pre>
 Section 1: Data Structures 
 Solve any two problems out of these three 
